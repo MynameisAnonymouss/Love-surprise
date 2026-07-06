@@ -52,9 +52,15 @@ button{
 <body>
 
 <div id="tela1" class="tela">
-    <h1>❤️ Te Amo ❤️</h1>
-    <button onclick="abrirCarta()">Clique aqui</button>
+    <h1>❤️ Eu tenho uma pergunta... ❤️</h1>
+    <p>Você também me ama? 🥺</p>
+
+    <button onclick="abrirCarta()">Sim ❤️</button>
+    <button id="nao">Não 😅</button>
 </div>
+    
+    
+
 
 <div id="tela2" class="tela">
     <h1>💌 Uma mensagem para você</h1>
@@ -84,6 +90,13 @@ setInterval(()=>{
 
     setTimeout(()=>h.remove(),6000);
 },300);
+const nao = document.getElementById("nao");
+
+nao.addEventListener("mouseover", () => {
+    nao.style.position = "absolute";
+    nao.style.left = Math.random() * 80 + "vw";
+    nao.style.top = Math.random() * 80 + "vh";
+});
 </script>
 
 </body>
